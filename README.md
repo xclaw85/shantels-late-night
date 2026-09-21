@@ -10,32 +10,23 @@ Single static HTML file. No build step, no dependencies, no trackers.
 
 ## Design
 
-Forest-green theme drawn from the local mixed-conifer forest. The pine ridgelines,
-bough, cone, acorn and owl are hand-generated SVG (see notes below), not stock art.
+"Night Canopy": a dark forest-green theme drawn from the local mixed-conifer forest.
+The pines hang from the top edge so the visitor is looking up into the canopy, lit by a
+moonlit sky behind them. The ridgelines, bough, cone, acorn and owl are generated SVG
+(see notes below), not stock art.
 
 Dynamic pieces:
 
 - **Live open/closed status.** Reads the visitor's clock and shows "Open now",
   "Open - last orders" after 2:30 AM, or "Opens in 4h 12m" when closed. Updates
   every 30 seconds. Appears in the hero and above the phone number.
-- **Parallax ridgelines.** Three layers of pines scroll at different rates.
-- **Twinkling star field** and a slow drifting fog band in the hero.
-- **Reveal-on-scroll** for each section, staggered.
+- **Inverted canopy** in the hero, silhouetted against a moonlit sky gradient.
+- **Drifting mist** band that slowly crosses the canopy.
+- **Blinking owl** (great horned, *Bubo virginianus*) in the concierge section.
+- **Reveal-on-scroll** for each section, staggered, plus a card hover lift.
 
 All motion is disabled under `prefers-reduced-motion`, and every section stays
 visible with JavaScript switched off.
-
-### Alternate designs
-
-Two other directions are published under `previews/` (marked `noindex`):
-
-| Preview | Direction |
-|---|---|
-| `previews/moonlit-ridge.html` | What the live site uses |
-| `previews/field-guide.html` | Light, editorial, botanical specimen plates |
-| `previews/night-canopy.html` | Dark throughout, inverted canopy, owl motif |
-
-Delete the `previews/` folder once a direction is settled.
 
 ### Regenerating the artwork
 
