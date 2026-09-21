@@ -8,6 +8,42 @@ errand service in the Lake Arrowhead area.
 
 Single static HTML file. No build step, no dependencies, no trackers.
 
+## Design
+
+Forest-green theme drawn from the local mixed-conifer forest. The pine ridgelines,
+bough, cone, acorn and owl are hand-generated SVG (see notes below), not stock art.
+
+Dynamic pieces:
+
+- **Live open/closed status.** Reads the visitor's clock and shows "Open now",
+  "Open - last orders" after 2:30 AM, or "Opens in 4h 12m" when closed. Updates
+  every 30 seconds. Appears in the hero and above the phone number.
+- **Parallax ridgelines.** Three layers of pines scroll at different rates.
+- **Twinkling star field** and a slow drifting fog band in the hero.
+- **Reveal-on-scroll** for each section, staggered.
+
+All motion is disabled under `prefers-reduced-motion`, and every section stays
+visible with JavaScript switched off.
+
+### Alternate designs
+
+Two other directions are published under `previews/` (marked `noindex`):
+
+| Preview | Direction |
+|---|---|
+| `previews/moonlit-ridge.html` | What the live site uses |
+| `previews/field-guide.html` | Light, editorial, botanical specimen plates |
+| `previews/night-canopy.html` | Dark throughout, inverted canopy, owl motif |
+
+Delete the `previews/` folder once a direction is settled.
+
+### Regenerating the artwork
+
+The SVG path data was produced by a generator (seeded, so it is reproducible):
+conifers are stacked triangles with a width taper, ridgelines lay them out across
+a 1440-unit span, and the bough sweeps needles back along a bezier. The paths are
+baked into `index.html`, so there is no build step to run.
+
 ## Hosting (GitHub Pages)
 
 Repo → **Settings** → **Pages** → Source: **Deploy from a branch** → Branch: `main` / `/ (root)` → Save.
