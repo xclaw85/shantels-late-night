@@ -10,18 +10,20 @@ Single static HTML file. No build step, no dependencies, no trackers.
 
 ## Design
 
-"Night Canopy": a dark forest-green theme drawn from the local mixed-conifer forest.
-The pines hang from the top edge so the visitor is looking up into the canopy, lit by a
-moonlit sky behind them. The ridgelines, bough, cone, acorn and owl are generated SVG
-(see notes below), not stock art.
+A dark forest-green theme drawn from the local mixed-conifer forest. The hero is a
+moonlit treeline: a star field, a low moon, and three layers of pines that scroll at
+different rates. The nearest ridge is filled in the page background colour, so the
+forest runs straight into the body of the page with no seam. The ridgelines, bough,
+cone, acorn and owl are generated SVG (see notes below), not stock art.
 
 Dynamic pieces:
 
 - **Live open/closed status.** Reads the visitor's clock and shows "Open now",
   "Open - last orders" after 2:30 AM, or "Opens in 4h 12m" when closed. Updates
   every 30 seconds. Appears in the hero and above the phone number.
-- **Inverted canopy** in the hero, silhouetted against a moonlit sky gradient.
-- **Drifting mist** band that slowly crosses the canopy.
+- **Parallax treeline.** Three pine ridges scroll at different rates (far moves most,
+  so it reads as furthest away).
+- **Twinkling star field** and a slow drifting fog band in the hero.
 - **Blinking owl** (great horned, *Bubo virginianus*) in the concierge section.
 - **Reveal-on-scroll** for each section, staggered, plus a card hover lift.
 
